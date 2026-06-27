@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BABBI 1952 | Over 70 years of daily little pleasures</title>
+  <meta name="description" content="Babbi is a story rich in tradition: since 1952 we have been creating masterpieces of confectionery art for those in search of an unforgettable taste experience." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <a href="#" class="top-bar-link" id="shop-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        SHOP
+      </a>
+      <a href="#" class="top-bar-link top-bar-world" id="babbi-world-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        BABBI WORLD
+      </a>
+    </div>
+    <div class="top-bar-logo">
+      <a href="#" id="logo-link">
+        <div class="logo-text">BABBI</div>
+        <div class="logo-year">1952</div>
+      </a>
+    </div>
+    <div class="top-bar-right">
+      <a href="#" class="top-bar-link lang-link" id="lang-link">EN <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></a>
+      <button class="search-btn" id="search-btn" aria-label="Search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- MAIN NAV -->
+  <nav class="main-nav" id="main-nav">
+    <ul class="nav-list">
+      <li><a href="#" id="nav-world">BABBI WORLD</a></li>
+      <li><a href="#ingredients" id="nav-ingredients">INGREDIENTS</a></li>
+      <li><a href="#" id="nav-cones">CONES AND WAFERS</a></li>
+      <li><a href="#" id="nav-confectionery">CONFECTIONERY SPECIALTIES</a></li>
+      <li><a href="#" id="nav-bakery">BABBI HOME BAKERY</a></li>
+      <li><a href="#academy" id="nav-academy">ACADEMY</a></li>
+      <li><a href="#" id="nav-contacts">CONTACTS</a></li>
+    </ul>
+  </nav>
+
+  <!-- SEARCH OVERLAY -->
+  <div class="search-overlay" id="search-overlay">
+    <div class="search-inner">
+      <input type="text" placeholder="Search..." class="search-input" id="search-input" />
+      <button class="search-close" id="search-close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <video
+        class="hero-img hero-video"
+        src="Babbi_Copertina Sito_16x9-LQ.mp4"
+        autoplay
+        loop
+        muted
+        playsinline
+        preload="auto"
+        aria-label="Babbi confectionery showcase video"
+      ></video>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="hero-title-top">Over 70 years of</span>
+        <em class="hero-title-italic">daily little pleasures</em>
+      </h1>
+      <p class="hero-subtitle">
+        Babbi is a <strong>story</strong> rich in <strong>tradition</strong>: since <strong>1952</strong> we have been creating masterpieces of
+        <strong>confectionery art</strong> for those in search of an unforgettable <strong>taste experience</strong>.
+      </p>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- TRADITION SECTION -->
+  <section class="tradition-section" id="tradition">
+    <div class="tradition-inner">
+      <div class="tradition-text-col">
+        <span class="section-label">OUR TRADITION</span>
+        <p class="tradition-description" id="scroll-text-anim">
+          The experience that intertwines <em>tradition</em> and
+          <em>innovation</em>, dedicated to those who seek
+          authentic pleasure in every detail.
+        </p>
+        <p class="tradition-body">
+          Savouring a Babbi product is a <strong>sensory journey</strong> where textures, aromas and flavours intertwine, allowing space <strong>for genuine emotions</strong>. True taste is born to transform every bite into <strong>a moment to cherish</strong>.
+        </p>
+        <div style="display: flex; gap: 24px; align-items: center;">
+          <a href="#" class="btn-outline" id="discover-btn">DISCOVER MORE</a>
+          <a href="#" class="link-arrow dark" id="join-btn">JOIN US <span>→</span></a>
+        </div>
+      </div>
+      <div class="tradition-images-col">
+        <div class="tradition-product-wrap">
+          <img src="image.png" alt="Babbi chocolate wafer with cocoa" class="tradition-product-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INGREDIENTS SECTION -->
+  <section class="ingredients-section" id="ingredients">
+    <!-- Category tabs -->
+    <div class="ingredients-tabs">
+      <button class="ing-tab active" data-tab="gelato" id="tab-gelato">GELATO AND PASTRY INGREDIENTS</button>
+      <button class="ing-tab" data-tab="wafer" id="tab-wafer">WAFER CONES AND WAFERS</button>
+      <button class="ing-tab" data-tab="confectionery" id="tab-confectionery">CONFECTIONERY SPECIALTIES</button>
+      <button class="ing-tab" data-tab="bakery" id="tab-bakery">BABBI HOME BAKERY</button>
+    </div>
+
+    <!-- Tab content -->
+    <div class="ingredients-content">
+      <!-- Gelato -->
+      <div class="ing-panel active" data-panel="gelato">
+        <div class="ing-panel-left">
+          <span class="section-label gold">GELATO AND PASTRY INGREDIENTS</span>
+          <h2 class="ing-title">Ingredients for<br><em>Gelato and Pastry</em></h2>
+          <p class="ing-desc">They are the key to creating <strong>unique and irresistible creations</strong> that enhance <strong>every nuance of taste</strong>. Discover our selection and be inspired.</p>
+          <div class="ing-ctas">
+            <a href="#" class="btn-outline gold" id="btn-explore-gelato">EXPLORE PRODUCTS</a>
+            <a href="#" class="link-arrow" id="link-gelato">DISCOVER MORE <span>→</span></a>
+          </div>
+        </div>
+        <div class="ing-panel-right">
+          <div class="ing-slider" id="gelato-slider">
+            <div class="ing-slide">
+              <img src="img/gelato_slider_1.jpg" alt="Gelato with fig" />
+            </div>
+            <div class="ing-slide">
+              <img src="img/gelato_slider_2.jpg" alt="Caramel pastry with pecans" />
+            </div>
+          </div>
+          <div class="ing-slider-dots">
+            <span class="dot active" data-idx="0"></span>
+            <span class="dot" data-idx="1"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wafer -->
+      <div class="ing-panel" data-panel="wafer">
+        <div class="ing-panel-left">
+          <span class="section-label gold">WAFER CONES AND WAFERS</span>
+          <h2 class="ing-title">Wafer Cones<br><em>&amp; Wafers</em></h2>
+          <p class="ing-desc">Crafted with <strong>premium quality</strong> ingredients, our cones and wafers deliver the perfect <strong>crispy complement</strong> to any gelato or dessert creation.</p>
+          <div class="ing-ctas">
+            <a href="#" class="btn-outline gold" id="btn-explore-wafer">EXPLORE PRODUCTS</a>
+            <a href="#" class="link-arrow" id="link-wafer">DISCOVER MORE <span>→</span></a>
+          </div>
+        </div>
+        <div class="ing-panel-right">
+          <div class="ing-slider">
+            <div class="ing-slide">
+              <img src="img/wafer_cone.png" alt="Wafer cones" />
+            </div>
+            <div class="ing-slide">
+              <img src="img/ingredients_1.png" alt="Gelato with cone" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Confectionery -->
+      <div class="ing-panel" data-panel="confectionery">
+        <div class="ing-panel-left">
+          <span class="section-label gold">CONFECTIONERY SPECIALTIES</span>
+          <h2 class="ing-title">Confectionery<br><em>Specialties</em></h2>
+          <p class="ing-desc">A world of <strong>exceptional taste</strong>, where artisan tradition meets <strong>innovative creativity</strong>. Our specialties enchant every palate.</p>
+          <div class="ing-ctas">
+            <a href="#" class="btn-outline gold" id="btn-explore-conf">EXPLORE PRODUCTS</a>
+            <a href="#" class="link-arrow" id="link-conf">DISCOVER MORE <span>→</span></a>
+          </div>
+        </div>
+        <div class="ing-panel-right">
+          <div class="ing-slider">
+            <div class="ing-slide">
+              <img src="img/confectionery.png" alt="Confectionery specialties" />
+            </div>
+            <div class="ing-slide">
+              <img src="img/tradition_2.png" alt="Caramel pastry" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bakery -->
+      <div class="ing-panel" data-panel="bakery">
+        <div class="ing-panel-left">
+          <span class="section-label gold">BABBI HOME BAKERY</span>
+          <h2 class="ing-title">Home Bakery<br><em>Delights</em></h2>
+          <p class="ing-desc">Bring the <strong>Babbi tradition</strong> into your home. Our home bakery collection offers <strong>premium ingredients</strong> to recreate artisan pastries at home.</p>
+          <div class="ing-ctas">
+            <a href="#" class="btn-outline gold" id="btn-explore-bakery">EXPLORE PRODUCTS</a>
+            <a href="#" class="link-arrow" id="link-bakery">DISCOVER MORE <span>→</span></a>
+          </div>
+        </div>
+        <div class="ing-panel-right">
+          <div class="ing-slider">
+            <div class="ing-slide">
+              <img src="img/homebakery.png" alt="Home bakery products" />
+            </div>
+            <div class="ing-slide">
+              <img src="img/tradition_1.png" alt="Artisan gelato" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER SECTION -->
+  <section class="ticker-section" id="ticker">
+    <div class="ticker-row ticker-row-1">
+      <div class="ticker-inner">
+        <span>SMALL PLEASURES</span>
+        <span>SMALL PLEASURES</span>
+        <span>SMALL PLEASURES</span>
+        <span>SMALL PLEASURES</span>
+        <span>SMALL PLEASURES</span>
+        <span>SMALL PLEASURES</span>
+      </div>
+    </div>
+    <div class="ticker-row ticker-row-2">
+      <div class="ticker-inner ticker-reverse">
+        <span>DAILY</span>
+        <span>DAILY</span>
+        <span>DAILY</span>
+        <span>DAILY</span>
+        <span>DAILY</span>
+        <span>DAILY</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTORY SECTION -->
+  <section class="history-section" id="history">
+    <div class="history-photos-col">
+      <div class="history-photos-inner" id="history-photos-inner">
+        <div class="history-photo-wrap history-photo-top">
+          <img src="img/history_3.png" alt="Babbi family history 1950s" />
+        </div>
+        <div class="history-photo-wrap history-photo-mid">
+          <img src="img/history_1.png" alt="Babbi factory 1952" />
+        </div>
+        <div class="history-photo-wrap history-photo-bottom">
+          <img src="img/history_2.png" alt="Babbi founders" />
+        </div>
+        <div class="history-photo-wrap history-photo-right-top">
+          <img src="img/history_2.png" alt="Babbi 1952 car" />
+        </div>
+      </div>
+    </div>
+    <div class="history-text-col">
+      <span class="section-label">OUR HISTORY</span>
+      <h2 class="history-title">A <em>sweet story</em> since<br>1952</h2>
+      <p class="history-desc">
+        It all started with the dream of Attilio Babbi, who with passion and entrepreneurial spirit transformed a simple idea into an internationally renowned brand. Our history is a journey through time, marked by continuous innovation and unwavering commitment to quality.
+      </p>
+      <a href="#" class="link-arrow dark" id="find-out-more-btn">FIND OUT MORE <span>→</span></a>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS / PISTACHIO SECTION -->
+  <section class="pistachio-section" id="pistachio">
+    <div class="pistachio-bg">
+      <img src="img/pistachio_bg.png" alt="Babbi pistachio" />
+      <div class="pistachio-overlay"></div>
+    </div>
+    <div class="pistachio-content">
+      <span class="section-label light">CERTIFICATIONS</span>
+      <h2 class="pistachio-title"><em>We look the future</em></h2>
+      <p class="pistachio-desc">
+        From the <strong>careful selection of the finest raw materials</strong> to the <strong>strict controls</strong> at every stage of production, <strong>every detail is taken care of</strong> to guarantee a taste experience that reflects our excellence.
+      </p>
+      <div class="pistachio-ctas">
+        <a href="#" class="btn-outline light" id="btn-pistachio">DISCOVER BABBI PISTACHIO</a>
+        <a href="#" class="link-arrow light" id="link-certifications">CERTIFICATIONS <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACADEMY SECTION -->
+  <section class="academy-section" id="academy">
+    <div class="academy-images">
+      <div class="academy-img-wrap">
+        <img src="img/academy_1.png" alt="Attilio Babbi Academy training" />
+      </div>
+      <div class="academy-img-wrap">
+        <img src="img/academy_2.png" alt="Gelato popsicle preparation" />
+      </div>
+    </div>
+    <div class="academy-text">
+      <h2 class="academy-title"><em>Excellence training</em> for all levels</h2>
+      <p class="academy-desc">
+        At the Attilio Babbi Academy, passion and expertise come together to offer courses dedicated both to professionals in gelato and pastry, and to those approaching this world for the first time. In our labs, expert instructors guide each participant through a practical, inspiring path designed to refine techniques, discover new ideas and turn them into successful creations.
+      </p>
+      <div class="academy-ctas">
+        <a href="#" class="btn-outline" id="btn-academy">EXPLORE THE ACADEMY</a>
+        <a href="#" class="link-arrow" id="link-courses">DISCOVER THE COURSES <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-col footer-social-col">
+        <h3 class="footer-heading">Follow us on Social Media</h3>
+        <p class="footer-social-desc">Follow Babbi on social media and get inspired: news, creativity, and passion await you.</p>
+        <div class="footer-social-icons">
+          <a href="#" aria-label="Instagram" id="footer-instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" id="footer-facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube" id="footer-youtube">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" id="footer-linkedin">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-heading">Babbi World</h4>
+        <ul>
+          <li><a href="#" id="footer-history">History</a></li>
+          <li><a href="#" id="footer-certifications">Certifications</a></li>
+          <li><a href="#" id="footer-contacts">Contacts</a></li>
+          <li><a href="#" id="footer-work">Work with us</a></li>
+        </ul>
+        <h4 class="footer-col-heading mt">Ingredients</h4>
+        <h4 class="footer-col-heading mt">Cones and Wafers</h4>
+        <h4 class="footer-col-heading mt">Confectionery Specialties</h4>
+        <h4 class="footer-col-heading mt">Babbi Home Bakery</h4>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-heading">Magazine</h4>
+        <ul>
+          <li><a href="#" id="footer-recipes">Recipes</a></li>
+          <li><a href="#" id="footer-news">News</a></li>
+          <li><a href="#" id="footer-events">Events</a></li>
+          <li><a href="#" id="footer-videos">Videos</a></li>
+        </ul>
+        <h4 class="footer-col-heading mt">Academy</h4>
+        <ul>
+          <li><a href="#" id="footer-inperson">In-person courses</a></li>
+          <li><a href="#" id="footer-onetone">One-to-one courses</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-heading">Reserved Area</h4>
+        <ul>
+          <li><a href="#" id="footer-professional">Professional</a></li>
+          <li><a href="#" id="footer-academy-link">Attilio Babbi Academy</a></li>
+          <li><a href="#" id="footer-agents">Agents portal</a></li>
+          <li><a href="#" id="footer-docs">Documents portal</a></li>
+          <li><a href="#" id="footer-ethics">Code of Ethics and Organizational Model 231</a></li>
+        </ul>
+        <h4 class="footer-col-heading mt">Legal</h4>
+        <ul>
+          <li><a href="#" id="footer-whistle">Whistleblowing</a></li>
+          <li><a href="#" id="footer-terms">Terms and Conditions</a></li>
+          <li><a href="#" id="footer-privacy">Privacy Policy</a></li>
+          <li><a href="#" id="footer-cookie">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-logo">
+        <span class="footer-logo-text">BABBI</span>
+      </div>
+      <span class="footer-copy">© BABBI 2026</span>
+      <p class="footer-legal-text">Babbi SRL Unipersonale subject to direction and control of Babbi GROUP SpA. Via Caduti di via Fani 80 - 47032 Bertinoro (FC) Italy</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
