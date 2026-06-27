@@ -883,7 +883,7 @@ button {
 .parallax-bg {
   position: absolute;
   inset: -10%;
-  background: url('img/gelato_parallax_bg.png') center center / cover no-repeat;
+  background: url('img/pistachio_parallax_bg.png') center center / cover no-repeat;
   filter: brightness(0.75) blur(1.5px);
   transform-origin: center center;
   will-change: transform;
@@ -1223,6 +1223,14 @@ button {
   font-weight: 400;
   margin-bottom: 8px;
   line-height: 1.2;
+}
+
+.recipe-desc {
+  font-family: 'Jost', sans-serif;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 12px;
+  line-height: 1.4;
 }
 
 .recipe-tag {

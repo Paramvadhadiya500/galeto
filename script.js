@@ -1,5 +1,5 @@
 /* =============================================
-   BABBI 1952 — WEBSITE CLONE
+   APRIL STUDIO | GELATERIA & BAKEHOUSE 1952 — WEBSITE CLONE
    Complete JavaScript
    ============================================= */
 
@@ -264,7 +264,7 @@
             // progress 0→1 as element moves from bottom to top of viewport
             const progress = (viewH - rect.top) / (viewH + rect.height);
             const floatY   = (progress - 0.5) * -60; // gentle -30px to +30px float
-            const rotateZ  = (progress - 0.5) * 2;   // subtle 1° tilt like Babbi
+            const rotateZ  = (progress - 0.5) * 2;   // subtle 1° tilt like April Studio | Gelateria & Bakehouse
             productImg.style.transform = `translateY(${floatY}px) rotate(${rotateZ}deg)`;
           }
 
@@ -424,7 +424,7 @@
       `;
       placeholder.innerHTML = `
         <div style="text-align: center;">
-          <div style="font-family: 'Playfair Display', serif; font-size: 20px; color: rgba(201, 184, 154, 0.8); font-style: italic; margin-bottom: 12px;">The Babbi Story</div>
+          <div style="font-family: 'Playfair Display', serif; font-size: 20px; color: rgba(201, 184, 154, 0.8); font-style: italic; margin-bottom: 12px;">The April Studio | Gelateria & Bakehouse Story</div>
           <div style="font-size: 11px; letter-spacing: 0.2em; color: rgba(255,255,255,0.35);">VIDEO PLAYER</div>
         </div>
       `;
@@ -721,3 +721,4 @@
     init();
   }
 })();
+
