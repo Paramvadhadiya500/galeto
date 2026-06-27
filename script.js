@@ -94,6 +94,39 @@
   };
 
   /* -----------------------------------------------
+     MOBILE MENU OVERLAY
+  ----------------------------------------------- */
+  const initMobileMenu = () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu-overlay');
+    const menuClose = document.getElementById('mobile-menu-close');
+    const navLinks = document.querySelectorAll('.mobile-nav-link, .mobile-nav-link-small');
+
+    if (!menuBtn || !mobileMenu) return;
+
+    const openMenu = () => {
+      mobileMenu.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeMenu = () => {
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    };
+
+    menuBtn.addEventListener('click', openMenu);
+    menuClose && menuClose.addEventListener('click', closeMenu);
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (link.classList.contains('mobile-nav-close') || link.getAttribute('href').startsWith('#')) {
+          closeMenu();
+        }
+      });
+    });
+  };
+
+  /* -----------------------------------------------
      INGREDIENTS TABS
   ----------------------------------------------- */
   const initIngredientsTabs = () => {
@@ -666,6 +699,7 @@
   const init = () => {
     initHeader();
     initSearch();
+    initMobileMenu();
     initIngredientsTabs();
     initIngredientSliders();
     initHistoryParallax();
