@@ -246,6 +246,71 @@
   };
 
   /* -----------------------------------------------
+     CERTIFICATIONS 3-LAYER PARALLAX
+  ----------------------------------------------- */
+  const initCertificationsParallax = () => {
+    const section = document.getElementById('certifications');
+    if (!section) return;
+
+    const bgLayer = section.querySelector('.parallax-bg');
+    const particles = section.querySelectorAll('.particle');
+    
+    // Disable if prefers reduced motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    const SPEED_BG = -0.15;
+    const SPEED_FOREGROUND = 0.45;
+
+    let ticking = false;
+    let inView = false;
+
+    // Use IntersectionObserver to pause scroll calculations when section is out of view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        inView = entry.isIntersecting;
+        if (inView) {
+          updateParallax(); // Initial positioning
+        }
+      });
+    }, { threshold: 0 }); // Trigger as soon as 1px is visible
+
+    observer.observe(section);
+
+    function updateParallax() {
+      if (!inView) {
+        ticking = false;
+        return;
+      }
+      
+      const rect = section.getBoundingClientRect();
+      const sectionCenter = rect.top + rect.height / 2;
+      const viewportCenter = window.innerHeight / 2;
+      const offset = viewportCenter - sectionCenter;
+
+      if (bgLayer) {
+        bgLayer.style.transform = `translateY(${offset * SPEED_BG}px)`;
+      }
+
+      particles.forEach(p => {
+        p.style.transform = `translateY(${offset * SPEED_FOREGROUND}px)`;
+      });
+
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking && inView) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    }, { passive: true });
+    
+    // Initial call
+    updateParallax();
+  };
+
+  /* -----------------------------------------------
      HERO SCROLL SMOOTH PARALLAX
   ----------------------------------------------- */
   const initHeroParallax = () => {
@@ -605,6 +670,7 @@
     initIngredientSliders();
     initHistoryParallax();
     initProductParallax();
+    initCertificationsParallax();
     initHeroParallax();
     initTicker();
     addAnimationClasses();

@@ -873,49 +873,52 @@ button {
 /* =============================================
    PISTACHIO / CERTIFICATIONS SECTION
    ============================================= */
-.pistachio-section {
+.parallax-section {
   position: relative;
-  min-height: 560px;
-  display: flex;
-  align-items: flex-end;
-  padding: 80px 56px;
+  height: 90vh;
   overflow: hidden;
+  isolation: isolate;
 }
 
-.pistachio-bg {
+.parallax-bg {
   position: absolute;
-  inset: 0;
-  z-index: 0;
+  inset: -10%;
+  background: url('img/gelato_parallax_bg.png') center center / cover no-repeat;
+  filter: brightness(0.75) blur(1.5px);
+  transform-origin: center center;
+  will-change: transform;
+  z-index: 1;
 }
 
-.pistachio-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform-origin: center right;
-  animation: pistachioZoom 20s ease-in-out infinite alternate;
-}
-
-@keyframes pistachioZoom {
-  from { transform: scale(1.05); }
-  to { transform: scale(1); }
-}
-
-.pistachio-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(20, 10, 4, 0.78) 0%,
-    rgba(20, 10, 4, 0.4) 60%,
-    transparent 100%
-  );
-}
-
-.pistachio-content {
+.parallax-content {
   position: relative;
   z-index: 2;
-  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 0 24px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.parallax-foreground {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  filter: blur(3px);
+  opacity: 0.65;
+  will-change: transform;
+  user-select: none;
+  border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+  background: radial-gradient(ellipse, #8B6914 0%, #5C430A 100%);
 }
 
 .pistachio-title {
@@ -1131,6 +1134,151 @@ button {
 }
 
 /* =============================================
+   12. RECIPES PAGE
+   ============================================= */
+.recipes-hero {
+  background-color: #F9F6F0;
+  padding: 140px 24px 60px; /* space for fixed header */
+}
+
+.recipes-hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.recipes-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px;
+  color: #86754D;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.recipes-subtitle {
+  font-family: 'Jost', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  max-width: 800px;
+}
+
+.recipes-grid-section {
+  background-color: #F9F6F0;
+  padding: 0 24px 100px;
+}
+
+.recipes-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.recipe-card {
+  background-color: #F4F1E9;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(134, 117, 77, 0.1);
+}
+
+.recipe-img-wrap {
+  height: 260px;
+  overflow: hidden;
+}
+
+.recipe-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.recipe-card:hover .recipe-img {
+  transform: scale(1.05);
+}
+
+.recipe-content {
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.recipe-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: #86754D;
+  font-weight: 400;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.recipe-tag {
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  color: #AF976D;
+  margin-bottom: 32px;
+}
+
+.recipe-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 16px;
+  margin-top: auto;
+}
+
+.meta-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #AF976D;
+}
+
+.meta-item svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.meta-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-label {
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #86754D;
+  letter-spacing: 0.5px;
+}
+
+.meta-value {
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  color: #666;
+  margin-top: 2px;
+}
+
+.recipes-load-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* =============================================
    SCROLL ANIMATIONS
    ============================================= */
 .fade-up {
@@ -1205,6 +1353,10 @@ button {
   .footer-inner {
     grid-template-columns: 1fr 1fr;
   }
+  /* Recipes Grid */
+  .recipes-grid { grid-template-columns: repeat(2, 1fr); }
+  .recipes-hero { padding-top: 120px; }
+  .recipes-title { font-size: 40px; }
 }
 
 @media (max-width: 768px) {
@@ -1219,10 +1371,23 @@ button {
   .ing-panel-left { padding: 48px 24px; }
   .ingredients-tabs { padding: 0 24px; }
   .history-text-col { padding: 48px 24px; }
-  .pistachio-section { padding: 60px 24px; }
+  
+  /* Recipes Grid Mobile */
+  .recipes-grid { grid-template-columns: 1fr; }
+  .recipes-hero { padding-top: 100px; }
+  .recipes-title { font-size: 32px; }
+
   .academy-text { padding: 48px 24px; }
   .footer-inner { padding: 48px 24px 36px; grid-template-columns: 1fr; }
   .footer-bottom { padding: 20px 24px; flex-direction: column; align-items: flex-start; }
   .footer-legal-text { margin-left: 0; }
   .nav-list li a { padding: 0 12px; font-size: 9px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parallax-bg, .particle {
+    will-change: auto;
+    transition: none !important;
+    transform: none !important;
+  }
 }
